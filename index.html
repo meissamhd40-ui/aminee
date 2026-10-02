@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Portfolio von ATTAR Mohammed El Amine – Automatisierungstechnik, industrielle Informatik und industrielle Praxis.">
+
+    <title>ATTAR Mohammed El Amine | Portfolio</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                linear-gradient(180deg, #f7fafc 0%, #eef3f7 100%);
+
+            color: #1d2a36;
+            line-height: 1.6;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid #d8e0e7;
+        }
+
+
+        .navbar {
+            width: 90%;
+            max-width: 1200px;
+            height: 75px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: -2px;
+        }
+
+
+        .logo span {
+            color: #176b87;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+            color: #526473;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+            color: #176b87;
+        }
+
+
+        .menu-button {
+            display: none;
+
+            background: none;
+            border: none;
+
+            color: #1d2a36;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 90px;
+        }
+
+
+        .hero-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .small-title {
+            color: #176b87;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(60px, 8vw, 105px);
+
+            line-height: 0.95;
+
+            letter-spacing: -6px;
+        }
+
+
+        .hero h1 span {
+            color: #176b87;
+        }
+
+
+        .hero h2 {
+            margin-top: 30px;
+
+            font-size: 23px;
+
+            color: #263b4b;
+
+            line-height: 1.3;
+        }
+
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #526473;
+
+            margin-top: 20px;
+
+            font-size: 16px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-top: 30px;
+        }
+
+
+        .button {
+            padding: 13px 20px;
+
+            border-radius: 9px;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+
+        .button-main {
+            background: #63d5ff;
+
+            color: #ffffff;
+        }
+
+
+        .button-main:hover {
+            transform: translateY(-3px);
+        }
+
+
+        .button-outline {
+            border:
+                1px solid #cbd6de;
+
+            color: #1d2a36;
+        }
+
+
+        .button-outline:hover {
+            border-color: #176b87;
+
+            color: #176b87;
+        }
+
+
+        .hero-info {
+            margin-top: 35px;
+
+            display: flex;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+            color: #607484;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           HERO TECHNICAL VISUAL
+        ====================================================== */
+
+        .hero-visual {
+            height: 450px;
+
+            border-radius: 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(99, 213, 255, 0.14),
+                    transparent 45%
+                ),
+
+                linear-gradient(
+                    330deg,
+                    rgba(125, 100, 255, 0.16),
+                    transparent 50%
+                ),
+
+                #0d2035;
+
+            border:
+                1px solid #d7e0e7;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .visual-grid {
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(99, 213, 255, 0.045) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(99, 213, 255, 0.045) 1px,
+                    transparent 1px
+                );
+
+            background-size: 35px 35px;
+
+            opacity: 0.8;
+        }
+
+
+        .tech-center {
+            position: relative;
+
+            z-index: 2;
+
+            width: 150px;
+
+            height: 150px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(99, 213, 255, 0.4);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                rgba(99, 213, 255, 0.05);
+
+            box-shadow:
+                0 0 50px rgba(99, 213, 255, 0.08);
+        }
+
+
+        .tech-center-inner {
+            width: 95px;
+
+            height: 95px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.18);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #176b87;
+
+            font-size: 34px;
+
+            font-weight: bold;
+        }
+
+
+        .tech-ring {
+            position: absolute;
+
+            width: 230px;
+
+            height: 230px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(99, 213, 255, 0.14);
+        }
+
+
+        .tech-ring-two {
+            position: absolute;
+
+            width: 340px;
+
+            height: 340px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(125, 100, 255, 0.12);
+        }
+
+
+        .tech-card {
+            position: absolute;
+
+            z-index: 3;
+
+            padding: 12px 15px;
+
+            border-radius: 10px;
+
+            background:
+                rgba(7, 17, 31, 0.78);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.10);
+
+            backdrop-filter: blur(10px);
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+
+            color: #b9c9da;
+        }
+
+
+        .tech-card strong {
+            display: block;
+
+            color: #176b87;
+
+            font-size: 10px;
+
+            margin-bottom: 3px;
+
+            letter-spacing: 2px;
+        }
+
+
+        .tech-card.one {
+            top: 45px;
+            left: 25px;
+        }
+
+
+        .tech-card.two {
+            top: 120px;
+            right: 20px;
+        }
+
+
+        .tech-card.three {
+            bottom: 95px;
+            left: 30px;
+        }
+
+
+        .tech-card.four {
+            bottom: 35px;
+            right: 25px;
+        }
+
+
+        .visual-label {
+            position: absolute;
+
+            left: 25px;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            color: #607484;
+
+            z-index: 5;
+        }
+
+
+        .visual-label strong {
+            color: #1d2a36;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ====================================================== */
+
+        .section {
+            padding: 120px 0;
+        }
+
+
+        .section-title {
+            margin-bottom: 55px;
+        }
+
+
+        .section-title > p {
+            color: #176b87;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-title h2 {
+            font-size: clamp(42px, 5vw, 65px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+        }
+
+
+        .section-title h2 span {
+            color: #176b87;
+        }
+
+
+        .section-description {
+            color: #607484;
+
+            max-width: 650px;
+
+            margin-top: 20px;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+        }
+
+
+        .about-text p {
+            color: #526473;
+
+            margin-bottom: 20px;
+
+            max-width: 600px;
+        }
+
+
+        .about-cards {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+
+        .info-card {
+            padding: 25px;
+
+            background:
+                rgba(255, 255, 255, 0.72);
+
+            border:
+                1px solid #d7e0e7;
+
+            border-radius: 15px;
+        }
+
+
+        .info-card span {
+            color: #176b87;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+
+        .info-card h3 {
+            margin-top: 8px;
+
+            font-size: 19px;
+        }
+
+
+        .info-card p {
+            color: #526473;
+
+            margin-top: 5px;
+        }
+
+
+        .info-card small {
+            color: #718391;
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ====================================================== */
+
+        .projects-section {
+            background:
+                #f1f5f8;
+        }
+
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .project-card {
+            padding: 30px;
+
+            border-radius: 20px;
+
+            border:
+                1px solid #d7e0e7;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.04),
+                    rgba(255, 255, 255, 0.015)
+                );
+
+            transition: 0.3s;
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(99, 213, 255, 0.4);
+        }
+
+
+        .project-card.featured {
+            grid-row: span 2;
+        }
+
+
+        .project-number {
+            color: #176b87;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        .project-icon {
+            font-size: 45px;
+
+            font-weight: bold;
+
+            color: #176b87;
+
+            margin-top: 50px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .project-category {
+            color: #2f7a67;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: bold;
+        }
+
+
+        .project-card h3 {
+            font-size: 25px;
+
+            margin-top: 12px;
+
+            line-height: 1.2;
+        }
+
+
+        .project-card h4 {
+            color: #536877;
+
+            font-size: 13px;
+
+            margin-top: 10px;
+        }
+
+
+        .project-card p {
+            color: #627786;
+
+            font-size: 14px;
+
+            margin-top: 18px;
+        }
+
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 22px;
+        }
+
+
+        .tags span {
+            padding: 6px 9px;
+
+            border-radius: 6px;
+
+            font-size: 10px;
+
+            color: #255b70;
+
+            background:
+                rgba(23, 107, 135, 0.08);
+
+            border:
+                1px solid rgba(23, 107, 135, 0.16);
+        }
+
+
+        .project-button {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 11px 15px;
+
+            border-radius: 8px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.13);
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .project-button:hover {
+            color: #176b87;
+
+            border-color: #176b87;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ====================================================== */
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .process-card {
+            padding-top: 20px;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .process-card span {
+            color: #176b87;
+
+            font-weight: bold;
+        }
+
+
+        .process-card h3 {
+            margin-top: 15px;
+
+            font-size: 20px;
+        }
+
+
+        .process-card p {
+            color: #879ab2;
+
+            font-size: 13px;
+
+            margin-top: 8px;
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ====================================================== */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .skill-card {
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #d7e0e7;
+        }
+
+
+        .skill-icon {
+            font-size: 30px;
+
+            color: #176b87;
+        }
+
+
+        .skill-card h3 {
+            margin-top: 15px;
+        }
+
+
+        .skill-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 20px;
+        }
+
+
+        .skill-list span {
+            padding: 6px 8px;
+
+            background:
+                rgba(99, 213, 255, 0.07);
+
+            border:
+                1px solid rgba(99, 213, 255, 0.1);
+
+            border-radius: 6px;
+
+            font-size: 10px;
+
+            color: #b8cce0;
+        }
+
+
+        /* =====================================================
+           DOCUMENTS
+        ====================================================== */
+
+        .documents-list {
+            border-top:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .document {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 22px 5px;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.1);
+
+            transition: 0.3s;
+        }
+
+
+        .document:hover {
+            padding-left: 15px;
+
+            color: #176b87;
+        }
+
+
+        .document strong {
+            display: block;
+
+            font-size: 15px;
+        }
+
+
+        .document span {
+            color: #718391;
+
+            font-size: 11px;
+        }
+
+
+        .document b {
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ====================================================== */
+
+        .contact-section {
+            padding: 120px 0;
+
+            background:
+                linear-gradient(180deg, #eef3f7, #ffffff);
+        }
+
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .contact-grid h2 {
+            font-size: clamp(42px, 5vw, 65px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+        }
+
+
+        .contact-grid h2 span {
+            color: #176b87;
+        }
+
+
+        .contact-grid > div > p:last-child {
+            margin-top: 20px;
+
+            color: #8da0b8;
+
+            max-width: 600px;
+        }
+
+
+        .contact-card {
+            background: #ffffff;
+
+            border:
+                1px solid #d7e0e7;
+
+            border-radius: 18px;
+
+            padding: 25px;
+        }
+
+
+        .contact-card div {
+            padding: 18px 0;
+
+            border-bottom:
+                1px solid #d8e0e7;
+        }
+
+
+        .contact-card div:last-child {
+            border-bottom: none;
+        }
+
+
+        .contact-card span {
+            display: block;
+
+            color: #176b87;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .contact-card a {
+            color: #d9e8f7;
+        }
+
+
+        .contact-card a:hover {
+            color: #176b87;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            border-top:
+                1px solid rgba(255, 255, 255, 0.08);
+
+            padding: 25px 0;
+        }
+
+
+        .footer-container {
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #70818e;
+
+            font-size: 11px;
+        }
+
+
+        /* =====================================================
+           ANIMATION
+        ====================================================== */
+
+        .animate {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+
+        .animate.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 850px) {
+
+            .menu-button {
+                display: block;
+            }
+
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+
+                top: 75px;
+
+                left: 5%;
+
+                right: 5%;
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                gap: 18px;
+
+                background: #ffffff;
+
+                border:
+                    1px solid rgba(255, 255, 255, 0.1);
+
+                border-radius: 12px;
+            }
+
+
+            .nav-links.active {
+                display: flex;
+            }
+
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero-visual {
+                height: 350px;
+            }
+
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .project-card.featured {
+                grid-row: auto;
+            }
+
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .hero h1 {
+                font-size: 58px;
+
+                letter-spacing: -4px;
+            }
+
+
+            .section {
+                padding: 80px 0;
+            }
+
+
+            .section-title h2 {
+                font-size: 43px;
+            }
+
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero-info {
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+
+            .footer-container {
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+
+            .tech-card {
+                transform: scale(0.85);
+            }
+
+        }
+
+
+        /* =====================================================
+           ATTAR INDUSTRIAL LIGHT THEME
+        ====================================================== */
+
+        .hero-visual {
+            background:
+                linear-gradient(145deg, rgba(23, 107, 135, 0.10), transparent 48%),
+                linear-gradient(330deg, rgba(63, 119, 142, 0.08), transparent 55%),
+                #e9f0f4;
+            border-color: #cfdae2;
+        }
+
+        .visual-grid {
+            background-image:
+                linear-gradient(rgba(23, 107, 135, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(23, 107, 135, 0.07) 1px, transparent 1px);
+        }
+
+        .tech-center,
+        .tech-center-inner {
+            border-color: rgba(23, 107, 135, 0.30);
+        }
+
+        .tech-center-inner {
+            color: #176b87;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.90);
+            border-color: #d1dce4;
+            color: #526473;
+        }
+
+        .tech-card strong,
+        .visual-label strong {
+            color: #176b87;
+        }
+
+        .visual-label {
+            color: #607484;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border-color: #d7e0e7;
+        }
+
+        .skill-card {
+            background: #ffffff;
+            border-color: #d7e0e7;
+        }
+
+        .skill-list span {
+            background: rgba(23, 107, 135, 0.06);
+            border-color: rgba(23, 107, 135, 0.14);
+            color: #315d6f;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border-color: #d7e0e7;
+        }
+
+        .contact-card a {
+            color: #315466;
+        }
+
+        .nav-links a {
+            color: #526473;
+        }
+
+        .project-card:hover {
+            border-color: rgba(23, 107, 135, 0.45);
+        }
+
+        .project-button:hover,
+        .nav-links a:hover,
+        .contact-card a:hover {
+            color: #176b87;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                AM<span>.</span>
+            </a>
+
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Start</a>
+                </li>
+
+                <li>
+                    <a href="#about">Über mich</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projekte</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Kompetenzen</a>
+                </li>
+
+                <li>
+                    <a href="#documents">Dokumente</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Kontakt</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+
+
+            <div class="hero-text animate">
+
+                <p class="small-title">
+                    PORTFOLIO · TECHNIK & PROJEKTE
+                </p>
+
+
+                <h1>
+
+                    ATTAR
+                    <br>
+
+                    <span>Mohammed El Amine</span>
+
+                </h1>
+
+
+                <h2>
+
+                    Automatisierungstechnik
+                    <br>
+                    & industrielle Informatik
+
+                </h2>
+
+
+                <p class="hero-description">
+
+                    Student der Automatisierungstechnik und industriellen Informatik mit praktischen
+                    Erfahrungen in industrieller Automatisierung, Schaltschränken,
+                    SPS/SCADA, Sensorik und Industrieelektrik.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="button button-main">
+                        Meine Projekte
+                    </a>
+
+
+                    <a href="documents/CV_AttAR_Mohammed_El_Amine.pdf"
+                        target="_blank"
+                        class="button button-outline">
+
+                        Lebenslauf öffnen
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-info">
+
+                    <span>
+                        📍 Tlemcen, Algerien
+                    </span>
+
+                    <span>
+                        🎓 Automatisierung & Industrieinformatik
+                    </span>
+
+                    <span>
+                        ⚙ Industrie & Technik
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TECHNICAL VISUAL
+            ================================================== -->
+
+            <div class="hero-visual animate">
+
+                <div class="visual-grid"></div>
+
+                <div class="tech-ring"></div>
+
+                <div class="tech-ring-two"></div>
+
+
+                <div class="tech-center">
+
+                    <div class="tech-center-inner">
+                        &lt;/&gt;
+                    </div>
+
+                </div>
+
+
+                <div class="tech-card one">
+
+                    <strong>
+                        AUTOMATION
+                    </strong>
+
+                    SPS · SCADA
+
+                </div>
+
+
+                <div class="tech-card two">
+
+                    <strong>
+                        EMBEDDED
+                    </strong>
+
+                    Sensorik · Aktoren
+
+                </div>
+
+
+                <div class="tech-card three">
+
+                    <strong>
+                        SOFTWARE
+                    </strong>
+
+                    TIA Portal · WinCC
+
+                </div>
+
+
+                <div class="tech-card four">
+
+                    <strong>
+                        DEVELOPMENT
+                    </strong>
+
+                    Praxis · Test · Dokumentation
+
+                </div>
+
+
+                <div class="visual-label">
+
+                    <span>
+                        TECHNICAL PORTFOLIO
+                    </span>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section class="section" id="about">
+
+        <div class="container">
+
+
+            <div class="section-title animate">
+
+                <p>
+                    01 · ÜBER MICH
+                </p>
+
+                <h2>
+
+                    Technik verstehen.
+                    <span>
+                        Praktisch umsetzen.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-text animate">
+
+                    <p>
+
+                        Ich studiere Automatisierungstechnik und industrielle Informatik und interessiere
+                        mich besonders für industrielle Automatisierung, Elektronik,
+                        Steuerungs- und Überwachungssysteme.
+
+                    </p>
+
+
+                    <p>
+
+                        Durch meine Studienprojekte und Praktika konnte ich praktische Erfahrungen
+                        mit Siemens S7-300, SIMATIC Manager, WinCC SCADA,
+                        elektrischen Schaltschränken, Verdrahtung, Sensoren und Aktoren sammeln.
+
+                    </p>
+
+
+                    <p>
+
+                        Dieses Portfolio zeigt ausgewählte Automatisierungsprojekte und gibt einen
+                        Einblick in meine technischen Kenntnisse, meine praktische Erfahrung
+                        und meine Motivation, technische Lösungen weiterzuentwickeln.
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-cards animate">
+
+
+                    <div class="info-card">
+
+                        <span>
+                            STUDIUM
+                        </span>
+
+                        <h3>
+                            Automatisierungstechnik & industrielle Informatik
+                        </h3>
+
+                        <p>
+                            Universität Abou Bekr Belkaid, Tlemcen
+                        </p>
+
+                        <small>
+                            2025 – Heute
+                        </small>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span>
+                            BACHELOR / LICENCE
+                        </span>
+
+                        <h3>
+                            Automatisierungstechnik
+                        </h3>
+
+                        <p>
+                            Universität Abou Bekr Belkaid, Tlemcen
+                        </p>
+
+                        <small>
+                            2022 – 2025
+                        </small>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <span>
+                            PRAKTISCHE ERFAHRUNG
+                        </span>
+
+                        <h3>
+                            CANAL PLAST · EPNC CANALPIPE
+                        </h3>
+
+                        <p>
+                            Industrielle Automatisierung · Schaltschränke · Verdrahtung
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section class="section projects-section" id="projects">
+
+        <div class="container">
+
+
+            <div class="section-title animate">
+
+                <p>
+                    02 · PROJEKTE
+                </p>
+
+                <h2>
+
+                    Meine
+                    <span>
+                        Projekte
+                    </span>
+
+                </h2>
+
+                <p class="section-description">
+
+                    Ausgewählte Projekte aus Automatisierungstechnik,
+                    SPS/SCADA und digitaler Regelung.
+
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-card featured animate">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <div class="project-icon">
+                        PID
+                    </div>
+
+                    <span class="project-category">
+                        REGELUNGSTECHNIK
+                    </span>
+
+                    <h3>
+                        Digitale PID-Temperaturregelung mit Arduino
+                    </h3>
+
+                    <h4>
+                        Arduino Uno · MAX6675 · Typ-K-Thermoelement · TIP122
+                    </h4>
+
+                    <p>
+                        Praktisches Projekt zur digitalen Temperaturregelung im geschlossenen
+                        Regelkreis mit Temperaturmessung, PID-Regelung und Heizelement.
+                    </p>
+
+                    <p>
+                        Der Arduino verarbeitet die Messwerte des MAX6675 und steuert
+                        das Heizelement über den TIP122 an.
+                    </p>
+
+                    <div class="tags">
+
+                        <span>
+                            Arduino Uno
+                        </span>
+
+                        <span>
+                            MAX6675
+                        </span>
+
+                        <span>
+                            PID-Regelung
+                        </span>
+
+                        <span>
+                            TIP122
+                        </span>
+
+                        <span>
+                            Typ-K-Thermoelement
+                        </span>
+
+                    </div>
+
+                    <a href="documents/Projekt_1_PID_Temperaturregelung_Arduino.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-button">
+
+                        Projekt-PDF öffnen ↗
+
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+
+                <article class="project-card animate">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <div class="project-icon">
+                        SPS
+                    </div>
+
+                    <span class="project-category">
+                        AUTOMATISIERUNG
+                    </span>
+
+                    <h3>
+                        Automatisierung und Überwachung eines Tankfüllstandssystems
+                    </h3>
+
+                    <h4>
+                        Siemens S7-300 · SIMATIC Manager · WinCC SCADA V7.4
+                    </h4>
+
+                    <p>
+                        Praktisches Automatisierungsprojekt mit SPS-Programmierung,
+                        Pumpensteuerung und Messung des Tankfüllstands.
+                    </p>
+
+                    <p>
+                        Die Prozessüberwachung erfolgt über eine WinCC-SCADA-Oberfläche
+                        mit Betriebs- und Sicherheitslogik.
+                    </p>
+
+                    <div class="tags">
+
+                        <span>
+                            Siemens S7-300
+                        </span>
+
+                        <span>
+                            SIMATIC Manager
+                        </span>
+
+                        <span>
+                            SPS
+                        </span>
+
+                        <span>
+                            WinCC
+                        </span>
+
+                        <span>
+                            SCADA
+                        </span>
+
+                    </div>
+
+                    <a href="documents/Projekt_2_Tankfuellstand_Automatisierung.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-button">
+
+                        Projekt-PDF öffnen ↗
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WORK PROCESS
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="section-title animate">
+
+                <p>
+                    03 · ARBEITSWEISE
+                </p>
+
+                <h2>
+
+                    Von der Idee zur
+                    <span>
+                        Umsetzung
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-card animate">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Analysieren
+                    </h3>
+
+                    <p>
+                        Technische Aufgaben und Anforderungen in Automatisierungssystemen verstehen.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card animate">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Entwickeln
+                    </h3>
+
+                    <p>
+                        SPS-, Steuerungs- und elektronische Lösungen Schritt für Schritt umsetzen.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card animate">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Testen
+                    </h3>
+
+                    <p>
+                        Steuerungen, Signale und Funktionen überprüfen und systematisch verbessern.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card animate">
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        Dokumentieren
+                    </h3>
+
+                    <p>
+                        Technische Abläufe, Projekte und praktische Erkenntnisse strukturiert dokumentieren.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section class="section" id="skills">
+
+        <div class="container">
+
+
+            <div class="section-title animate">
+
+                <p>
+                    04 · KOMPETENZEN
+                </p>
+
+                <h2>
+
+                    Technische
+                    <span>
+                        Kenntnisse
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card animate">
+
+                    <div class="skill-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Automatisierung & SPS
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Siemens S7-300</span>
+                        <span>SIMATIC Manager</span>
+                        <span>WinCC SCADA V7.4</span>
+                        <span>SPS-Programmierung</span>
+                        <span>Ladder Logic</span>
+                        <span>Pumpensteuerung</span>
+                        <span>Prozessüberwachung</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card animate">
+
+                    <div class="skill-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Industrieelektrik
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Schaltschränke</span>
+                        <span>Verdrahtung</span>
+                        <span>Sensorik</span>
+                        <span>Aktoren</span>
+                        <span>Frequenzumrichter</span>
+                        <span>Sanftanlasser</span>
+                        <span>Servomotorentechnik</span>
+                        <span>Elektrische Schaltpläne</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card animate">
+
+                    <div class="skill-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Elektronik & Programmierung
+                    </h3>
+
+                    <div class="skill-list">
+
+                        <span>Arduino</span>
+                        <span>PID-Regelung</span>
+                        <span>MAX6675</span>
+                        <span>Typ-K-Thermoelement</span>
+                        <span>TIP122</span>
+                        <span>TIA Portal</span>
+                        <span>C++</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>   </section>
+
+
+    <!-- =====================================================
+         DOCUMENTS
+    ====================================================== -->
+
+    <section class="section" id="documents">
+
+        <div class="container">
+
+
+            <div class="section-title animate">
+
+                <p>
+                    05 · DOKUMENTE
+                </p>
+
+                <h2>
+
+                    Meine
+                    <span>
+                        Unterlagen
+                    </span>
+
+                </h2>
+
+                <p class="section-description">
+
+                    Lebenslauf und die beiden Projektdokumentationen
+                    können direkt geöffnet werden.
+
+                </p>
+
+            </div>
+
+
+            <div class="documents-list">
+
+
+                <!-- CV -->
+
+                <a href="documents/CV_AttAR_Mohammed_El_Amine.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="document animate">
+
+                    <div>
+
+                        <strong>
+                            CV – ATTAR Mohammed El Amine
+                        </strong>
+
+                        <span>
+                            Lebenslauf · PDF
+                        </span>
+
+                    </div>
+
+                    <b>
+                        ↗
+                    </b>
+
+                </a>
+
+
+                <!-- PROJECT 1 -->
+
+                <a href="documents/Projekt_1_PID_Temperaturregelung_Arduino.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="document animate">
+
+                    <div>
+
+                        <strong>
+                            Projekt 1 – Digitale PID-Temperaturregelung mit Arduino
+                        </strong>
+
+                        <span>
+                            Projekt-Dokumentation · PDF
+                        </span>
+
+                    </div>
+
+                    <b>
+                        ↗
+                    </b>
+
+                </a>
+
+
+                <!-- PROJECT 2 -->
+
+                <a href="documents/Projekt_2_Tankfuellstand_Automatisierung.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="document animate">
+
+                    <div>
+
+                        <strong>
+                            Projekt 2 – Automatisierung und Überwachung eines Tankfüllstandssystems
+                        </strong>
+
+                        <span>
+                            Projekt-Dokumentation · PDF
+                        </span>
+
+                    </div>
+
+                    <b>
+                        ↗
+                    </b>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="container contact-grid">
+
+
+            <div class="animate">
+
+                <p class="small-title">
+                    06 · KONTAKT
+                </p>
+
+
+                <h2>
+
+                    Interesse an meinem
+                    <span>
+                        Profil?
+                    </span>
+
+                </h2>
+
+
+                <p>
+
+                    Für weitere Informationen zu meinem Werdegang, meinen Projekten
+                    oder meinem technischen Profil können Sie mich gerne kontaktieren.
+
+                </p>
+
+            </div>
+
+
+            <div class="contact-card animate">
+
+
+                <div>
+
+                    <span>
+                        E-MAIL
+                    </span>
+
+                    <a href="mailto:attarmohammedelamine19@gmail.com">
+
+                        attarmohammedelamine19@gmail.com
+
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        STANDORT
+                    </span>
+
+                    <strong>
+                        Tlemcen, Algerien
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        TELEFON
+                    </span>
+
+                    <strong>
+                        +213 697 495 325
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        LEBENSLAUF
+                    </span>
+
+                    <a href="documents/CV_AttAR_Mohammed_El_Amine.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        PDF öffnen ↗
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <span>
+                © 2026 ATTAR Mohammed El Amine
+            </span>
+
+            <span>
+                Technical Portfolio
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           MOBILE MENU
+        ================================================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("active");
+
+            }
+        );
+
+
+        /* =================================================
+           CLOSE MENU AFTER CLICK
+        ================================================== */
+
+        const links =
+            document.querySelectorAll(".nav-links a");
+
+
+        links.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove("active");
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           SCROLL ANIMATION
+        ================================================== */
+
+        const animatedElements =
+            document.querySelectorAll(".animate");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.10
+                }
+
+            );
+
+
+        animatedElements.forEach(
+            function (element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
